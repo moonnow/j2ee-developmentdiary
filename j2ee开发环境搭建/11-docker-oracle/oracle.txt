@@ -1,0 +1,21 @@
+CREATE TABLESPACE coding_data DATAFILE '/tablespacefile/coding_data.dbf' size 256M autoextend on next 32m maxsize 1024m;
+
+create user wodecoding identified by wodecoding default tablespace coding_data;
+
+grant connect,resource to wodecoding;
+grant create any sequence to wodecoding;
+grant create any table to wodecoding;
+grant delete any table to wodecoding;
+grant insert any table to wodecoding;
+grant select any table to wodecoding;
+grant unlimited tablespace to wodecoding;
+grant execute any procedure to wodecoding;
+grant update any table to wodecoding;
+grant create any view to wodecoding;
+grant dba to wodecoding;
+grant select on v_$sesstat to wodecoding;
+grant select on v_$statname to wodecoding;
+grant select on v_$session to wodecoding;
+grant select on v_$sql_plan to wodecoding;
+grant select on v_$sql_plan_statistics_all to wodecoding;
+grant select on v_$sql to wodecoding;

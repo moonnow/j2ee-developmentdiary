@@ -1,0 +1,46 @@
+下载地址
+
+https://nodejs.org/zh-cn/download/
+
+
+升级 npm 到最新版
+
+sudo npm install -g npm
+
+安装cnpm
+
+sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+
+angular
+
+安装ts
+
+sudo npm install -g typescript typings
+
+安装angular cli
+
+sudo cnpm install -g @angular/cli
+
+使用蚂蚁ui
+
+sudo cnpm install ng-zorro-antd --save
+
+框架用 ng-alain
+
+
+vue
+
+安装vue
+
+sudo npm install vue
+
+安装vue cli
+
+sudo npm install -g @vue/cli
+
+安装iview
+
+sudo npm install iview --save
+
+框架用 iview-admin

@@ -1,0 +1,17 @@
+安装稳定版本mysql数据库服务 不要装测试版本
+
+不同系统找对应的教程
+
+教程网址
+
+https://blog.csdn.net/hisense20112784/article/details/72909701
+
+下载地址
+
+https://dev.mysql.com/downloads/mysql/5.7.html#downloads
+
+配置环境变量 为了能用mysql命令
+
+export PATH=${PATH}:/usr/local/mysql/bin
+
+export PATH

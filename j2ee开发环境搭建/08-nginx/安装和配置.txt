@@ -1,0 +1,44 @@
+下载地址
+
+http://nginx.org/en/download.html
+
+mac下用命令安装
+
+ruby 要是不能用就先敲 git 根据提示安装命令行工具 然后输入如下命令 安装 brew
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+用 brew 安装 nginx
+
+brew install nginx
+
+
+nginx反向代理常用命令
+
+启动 nginx
+
+sudo nginx
+
+测试配置文件
+
+sudo nginx -t
+
+停止 nginx
+
+sudo nginx -s stop
+
+重启 nginx
+
+sudo nginx -s reload
+
+查看
+
+ps -ef | grep nginx
+
+配置文件路径
+
+/usr/local/etc/nginx
+
+静态资源存放路径
+
+/usr/local/Cellar/nginx/1.15.3

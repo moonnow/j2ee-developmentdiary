@@ -1,0 +1,9 @@
+下载地址
+
+https://www.eclipse.org/downloads/eclipse-packages/
+
+下载 j2ee 的版本 名称如下
+
+Eclipse IDE for Java EE Developers
+
+安装好之后进行配置

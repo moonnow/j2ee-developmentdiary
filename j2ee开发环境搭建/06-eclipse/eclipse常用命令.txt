@@ -1,0 +1,3 @@
+mac多开Eclipse
+
+open -n /Applications/Eclipse.app

@@ -1,0 +1,163 @@
+mac多开Eclipse
+
+open -n /Applications/Eclipse.app
+
+
+sudo nginx
+
+sudo nginx -s reload
+
+
+git checkout develop
+git pull
+git checkout l_develop
+git rebase develop
+
+
+git rebase --continue
+
+
+ssh root@127.0.0.1 -p 22
+
+scp -P 22 /folder/filename.jar root@127.0.0.1:/folder
+
+cp /folder/filename.jar /folder/
+
+scp -P 22 root@127.0.0.1:/folder/filename.jar /folder
+
+java -jar jarname.jar
+
+nohup java -jar jarname.jar &
+
+
+mysqldump -hlocalhost -P3306 -uroot -pmoonnow databasename TABLE_NAME > sqlfilename.sql
+
+mysql -hlocalhost -P3306 -uroot -pmoonnow -Ddatabasename < sqlfilename.sql
+
+
+chmod -R 777 /folder
+
+chmod +x filename.sh
+
+
+
+nginx反向代理
+
+sudo nginx
+
+sudo nginx -t
+
+sudo nginx -s stop
+
+sudo nginx -s reload
+
+ps -ef | grep nginx
+
+配置文件路径
+
+/usr/local/etc/nginx
+
+静态资源存放路径
+
+/usr/local/Cellar/nginx/1.15.3
+
+
+
+没有提交更新代码
+
+git checkout develop
+git pull
+git checkout l_develop
+git rebase develop
+
+
+拉项目建分支
+
+git branch develop remotes/origin/develop
+git checkout develop
+git branch l_develop develop
+git checkout l_develop
+git branch
+
+git branch develop remotes/origin/master
+git checkout develop
+git branch l_develop develop
+git checkout l_develop
+git branch
+
+git branch v1.x remotes/origin/v1.x
+git checkout v1.x
+git branch l_v1.x v1.x
+git checkout l_v1.x
+git branch
+
+
+新建版本库
+
+git init
+在当前文件夹中放入git配置文件以及项目文件
+git status
+git add .
+git commit -m "create project"
+git remote add origin ssh://caoyueyang@cyyyy.info:29418/cms.git  要上传到的git库
+
+git push -u origin master
+git branch develop master
+git checkout develop
+git push -u origin develop
+git branch l_develop develop
+git checkout l_develop
+git branch
+
+
+设置用户名邮箱
+
+git config --global user.name "Gao ZhiChao"
+git config --global user.email "60123894@qq.com"
+git config --global --list
+
+
+生成提交不使用密码key
+
+ssh-keygen -t rsa -C "60123894@qq.com"
+
+
+设置提交模式
+
+git config --global push.default matching
+git config --global push.default simple
+
+
+消除merge步骤
+
+master分支打
+
+git reset --hard 139dcfaa558e3276b30b6b2e5cbbb9c00bbdca96
+
+139dcfaa558e3276b30b6b2e5cbbb9c00bbdca96   >>>   这个是版本号  回退时换成自己要回到的版本号
+
+git push -f -u origin master
+
+查看网站git库版本是否回退
+
+如果成功回退 删除项目重新拉项目 不新建分支 直接打
+
+git push origin --delete develop   删除远端develop分支
+
+重建develop分支
+
+git branch develop master
+
+git checkout develop
+
+把develop分支推到远端
+
+git push -u origin develop
+
+建本地的l_develop分支
+
+git branch l_develop develop
+
+git checkout l_develop
+
+

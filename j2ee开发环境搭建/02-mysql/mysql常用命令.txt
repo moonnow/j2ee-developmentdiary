@@ -1,0 +1,29 @@
+连接数据库命令
+
+mysql -h localhost -u develop -p
+
+use 数据库名
+
+exit
+
+
+数据库表结构备份到文件
+
+mysqldump -h 127.0.0.1 -P 3306 -uroot -p -d mysql user > sql.sql
+
+mysqldump -h  -P  -u -p -d  > .sql
+
+-h  后面跟数据库连接地址
+
+-P  P是大写 这个是端口号
+
+-u  用户名
+
+-p  密码 可以不写在命令当中 回车之后输入
+
+-d  加上这个只备份表结构 不备份数据 后面跟的是数据库名 接着的是表名 如果不加表名 会备份数据库下的所有表
+
+
+命令行运行sql文件
+
+mysql -hlocalhost -P3306 -uroot -p -D数据库名 < sql.sql

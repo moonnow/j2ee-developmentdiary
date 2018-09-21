@@ -1,0 +1,53 @@
+jdk8网址
+
+https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+下载对应版本安装完成之后配置环境变量
+
+下面写的是主要的配置信息看不明白就百度教程对应着看
+
+先去命令行查看版本 命令能用就不需要配置环境变量了
+
+查看java jdk版本
+
+java -version
+
+linux环境变量生效
+
+source 加文件名(中间有空格)
+
+Windows      斜杠是用   \
+
+JAVA_HOME = C:\jdk1.5.0_06    jdk安装目录
+
+CLASSPATH = .;%JAVA_HOME%\lib\rt.jar;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;
+
+path = ;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+
+linux        斜杠是用   /
+
+.bashrc  文件写入
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin     这是原来有的 不用写
+
+export JAVA_HOME=/home/web/jdk1.8.0_111       jdk安装目录
+
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
+
+苹果同上   不行就试下头的
+
+set JAVA_HOME=/home/gaozhichao/java/jdk1.8.0_121       jdk安装目录
+
+export JAVA_HOME
+
+set CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+export CLASSPATH
+
+set PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
