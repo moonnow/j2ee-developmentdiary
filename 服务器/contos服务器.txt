@@ -1,0 +1,187 @@
+contos服务器
+
+ssh root@39.105.30.134 -p 22
+
+
+mysql
+
+使用 yum 安装 mysql
+
+下载 mysql80-community-release-el7-2.noarch.rpm 文件
+
+上传文件到服务器
+
+scp -P 22 /Users/moonnow/Downloads/mysql80-community-release-el7-2.noarch.rpm root@39.105.30.134:/root/tool/mysql8
+
+mysql80-community-release-el7-2.noarch.rpm 文件目录下
+
+sudo yum localinstall -y mysql80-community-release-el7-2.noarch.rpm
+
+安装 mysql 服务
+
+sudo yum install -y mysql-community-server
+
+启动 mysql 服务
+
+sudo service mysqld start
+
+查看 mysql 状态
+
+sudo service mysqld status
+
+查看 mysql 默认生成的密码
+
+sudo grep 'temporary password' /var/log/mysqld.log
+
+登录 mysql 数据库
+
+mysql -uroot -p
+
+FhosNP06iq!.
+
+修改 root 密码
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourpassword';
+
+exit
+
+使用新密码登录
+
+mysql -uroot -p
+
+yourpassword
+
+开启远程连接
+
+use mysql;
+
+SELECT USER, HOST FROM user;
+
+UPDATE user SET HOST = '%' WHERE USER = 'root';
+
+exit
+
+
+jdk
+
+scp -P 22 /Users/moonnow/Downloads/jdk-8u191-linux-x64.tar.gz root@39.105.30.134:/root/tool/jdk8
+
+jdk-8u191-linux-x64.tar.gz 文件目录下
+
+tar -zxvf jdk-8u191-linux-x64.tar.gz
+
+用户目录下
+
+vi .bash_profile
+
+配置环境变量
+
+export JAVA_HOME=/root/tool/jdk8/jdk1.8.0_191
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
+
+
+nginx
+
+scp -P 22 /Users/moonnow/Downloads/nginx-release-centos-7-0.el7.ngx.noarch.rpm root@39.105.30.134:/root/tool/nginx
+
+nginx-release-centos-7-0.el7.ngx.noarch.rpm 文件目录下
+
+sudo yum localinstall -y nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+安装 nginx
+
+sudo yum install -y nginx
+
+显示 nginx 资源路径
+
+whereis nginx
+
+配置文件路径
+
+/etc/nginx
+
+静态资源存放路径
+
+/usr/share/nginx
+
+
+docker
+
+安装依赖
+
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+
+使用阿里云地址
+
+sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+安装 docker
+
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+
+查看 docker 版本
+
+sudo docker version
+
+启动 docker 服务
+
+sudo systemctl start docker
+
+运行 hello world 测试
+
+sudo docker run hello-world
+
+登录 docker
+
+docker login -u moonnow -p moonnow
+
+
+docker oracle
+
+拉取 oracle 镜像
+
+docker pull alexeiled/docker-oracle-xe-11g
+
+保存本地镜像到文件
+
+docker save > oracle.tar alexeiled/docker-oracle-xe-11g:latest
+
+上传镜像文件到服务器
+
+scp -P 22 /Users/moonnow/wode/file/docker/oracle11g/oracle.tar root@39.105.30.134:/root/tool/oracle11g
+
+oracle.tar 镜像文件目录下
+
+docker load < oracle.tar
+
+通过 oracle 镜像启动容器
+
+docker run --privileged=true -h "oracle" --name "oracle" -d -p 49160:22 -p 1521:1521 -p 49162:8080 alexeiled/docker-oracle-xe-11g
+
+数据库连接信息
+
+system
+
+oracle
+
+XE
+
+1521
+
+
+docker contos
+
+拉取 contos 镜像
+
+docker pull centos
+
+通过 contos 镜像启动容器
+
+docker run --privileged=true --name "centos" -d -i -t centos /bin/bash
+
+进入容器
+
+docker exec -i -t centos /bin/bash

@@ -31,7 +31,7 @@ git init
 git status
 git add .
 git commit -m "create project"
-git remote add origin ssh://caoyueyang@cyyyy.info:29418/cms.git  要上传到的git库
+git remote add origin ssh://moonnow.cn:9400/init.git  要上传到的git库
 
 git push -u origin master
 git branch develop master

@@ -8,13 +8,23 @@ sudo nginx
 sudo nginx -s reload
 
 
-git checkout develop
+git checkout master
 git pull
-git checkout l_develop
-git rebase develop
+git checkout develop
+git rebase master
 
 
 git rebase --continue
+
+
+chmod +x create_table.sh
+
+chmod +x backup_table.sh
+
+chmod +x init_data.sh
+
+
+document.cookie="pro-token=pro";
 
 
 ssh root@127.0.0.1 -p 22
@@ -73,6 +83,10 @@ git rebase develop
 
 拉项目建分支
 
+git branch develop remotes/origin/master
+git checkout develop
+git branch
+
 git branch develop remotes/origin/develop
 git checkout develop
 git branch l_develop develop
@@ -97,13 +111,20 @@ git branch
 git init
 在当前文件夹中放入git配置文件以及项目文件
 git status
+
 git add .
-git commit -m "create project"
-git remote add origin ssh://caoyueyang@cyyyy.info:29418/cms.git  要上传到的git库
+git commit -m "first commit"
+
+git remote add origin ssh://moonnow.cn:9400/init.git  要上传到的git库
 
 git push -u origin master
+
+
 git branch develop master
 git checkout develop
+git branch
+
+
 git push -u origin develop
 git branch l_develop develop
 git checkout l_develop
@@ -161,3 +182,5 @@ git branch l_develop develop
 git checkout l_develop
 
 
+开启任何来源
+sudo spctl --master-disable

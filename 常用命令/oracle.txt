@@ -1,0 +1,31 @@
+默认使用 USERS 表空间创建用户
+
+CREATE USER "YOURUSERNAME" IDENTIFIED BY "yourpassword";
+
+给用户授权
+
+grant connect,resource to YOURUSERNAME;
+grant create any sequence to YOURUSERNAME;
+grant create any table to YOURUSERNAME;
+grant delete any table to YOURUSERNAME;
+grant insert any table to YOURUSERNAME;
+grant select any table to YOURUSERNAME;
+grant unlimited tablespace to YOURUSERNAME;
+grant execute any procedure to YOURUSERNAME;
+grant update any table to YOURUSERNAME;
+grant create any view to YOURUSERNAME;
+grant dba to YOURUSERNAME;
+
+
+创建表空间
+
+CREATE TABLESPACE "YOURTABLESPACENAME" DATAFILE '/u01/app/oracle/oradata/XE/YOURTABLESPACENAME.DBF' SIZE 128M AUTOEXTEND ON NEXT 32M MAXSIZE UNLIMITED;
+
+创建用户并指定表空间
+
+CREATE USER "YOURUSERNAME" IDENTIFIED BY "yourpassword" DEFAULT TABLESPACE "YOURTABLESPACENAME" TEMPORARY TABLESPACE "TEMP";
+
+
+登录oracle数据库
+
+sqlplus system/oracle

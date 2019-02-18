@@ -1,0 +1,35 @@
+mac
+
+启动 redis 后台服务
+
+brew services start redis
+
+重启 redis 后台服务
+
+brew services restart redis
+
+停止 redis 后台服务
+
+brew services stop redis
+
+
+使用控制台连接 redis
+
+redis-cli
+
+redis-cli -h 127.0.0.1 -p 6379
+
+
+contos
+
+启动 redis 后台服务
+
+service redis start
+
+停止 redis 后台服务
+
+service redis stop
+
+重启 redis 后台服务
+
+service redis restart

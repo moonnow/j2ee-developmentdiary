@@ -1,0 +1,106 @@
+SELECT * FROM PRO_COLUMNS columns WHERE columns.COLUMNS_ID IS NOT NULL AND columns.DT_ID = 'c7bb3fb6-4f91-4eb9-8f6e-c4a99d0231de' AND NOT EXISTS ( SELECT pk.PK_ID FROM PRO_PK pk WHERE pk.PK_ID IS NOT NULL AND pk.COLUMNS_ID = columns.COLUMNS_ID )
+
+
+/Users/moonnow/wode/cs/empire/3
+
+code-plugin
+
+
+( SELECT dataDict.DATA_DICT_NAME FROM PRO_DATA_DICT dataDict WHERE dataDict.DATA_DICT_ID IS NOT NULL AND dataDict.DATA_DICT_ID = dataDictValue.DATA_DICT_ID ) AS DATA_DICT_NAME
+
+( SELECT dt.DT_NAME FROM PRO_DT dt WHERE dt.DT_ID IS NOT NULL AND dt.DT_ID = sort.DT_ID ) AS DT_NAME
+
+( SELECT dt.DT_NAME FROM PRO_DT dt WHERE dt.DT_ID IS NOT NULL AND dt.DT_ID = sort.DT_ID ) AS DT_NAME
+
+
+( SELECT dt.DT_NAME FROM PRO_DT dt WHERE dt.DT_ID IS NOT NULL AND dt.DT_ID = virtualColumns.SOURCE_DT_ID ) AS DT_NAME
+
+( SELECT columns.COLUMN_NAME FROM PRO_COLUMNS columns WHERE columns.COLUMNS_ID IS NOT NULL AND columns.COLUMNS_ID = virtualColumns.TARGET_DISPLAY_COLUMNS_ID ) AS COLUMN_NAME
+
+
+( SELECT columns.COLUMN_NAME FROM PRO_COLUMNS columns WHERE columns.COLUMNS_ID IS NOT NULL AND columns.COLUMNS_ID = sort.COLUMNS_ID ) AS COLUMN_NAME
+
+( SELECT columns.COLUMN_NAME FROM PRO_COLUMNS columns WHERE columns.COLUMNS_ID IS NOT NULL AND columns.COLUMNS_ID = sort.COLUMNS_ID ) AS COLUMN_NAME
+
+
+
+
+
+https://start.spring.io/
+
+
+git clone https://github.com/moonnow/pro-rely.git
+
+git clone https://github.com/moonnow/tool.git
+
+git clone https://github.com/moonnow/test.git
+
+git clone https://github.com/moonnow/pro.git
+
+git clone https://github.com/moonnow/code-plugin.git
+
+git clone https://github.com/moonnow/vuepro.git
+
+
+
+
+
+https://github.com/moonnow/pro-rely
+
+https://github.com/moonnow/tool
+
+https://github.com/moonnow/test
+
+https://github.com/moonnow/pro
+
+https://github.com/moonnow/code-plugin
+
+https://github.com/moonnow/vuepro
+
+
+
+
+
+Generate Project
+
+
+
+
+brew install --universal --java subversion
+
+
+
+
+
+
+
+sudo mkdir -p /Library/Java/Extensions
+  sudo ln -s /usr/local/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

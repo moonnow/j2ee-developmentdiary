@@ -1,0 +1,146 @@
+ssh root@47.105.92.123 -p 2211
+
+Rootzyjm0
+
+scp -P 2211 /Users/moonnow/wode/kangaroomommy.war root@47.105.92.123:/www/server/tomcat/webapps
+
+scp -P 2211 /Users/moonnow/wode/kangaroomommy.war root@47.105.92.123:/www/server/apache-tomcat-8.5.34/webapps
+
+scp -P 2211 /Users/moonnow/wode/tool/apache-tomcat-8.5.34.tar.gz root@47.105.92.123:/www/server
+
+
+ssh root@139.199.121.92 -p 56529
+
+zzh@998.
+
+
+scp -P 56529 /Users/moonnow/Downloads/jdk-8u191-linux-x64.tar.gz root@139.199.121.92:/www/server/java
+
+export JAVA_HOME=/www/server/java/jdk1.8.0_191
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
+
+scp -P 56529 /Users/moonnow/wode/cs/run/4/pro-0.0.2.jar root@139.199.121.92:/www/wwwroot/jar/rootfile
+
+cp /www/wwwroot/jar/rootfile/pro-0.0.2.jar /www/wwwroot/jar/wwwfile
+
+scp -P 56529 /Users/moonnow/wode/pro/gitee/empire/vuepro/dist.tar.gz root@139.199.121.92:/www/wwwroot/jar/rootfile
+
+cp /www/wwwroot/jar/rootfile/dist.tar.gz /www/server/nginx
+
+
+misterzhao
+
+misterzhao@998.
+
+3306
+
+cat /etc/passwd | grep www
+
+cat /etc/passwd | grep root
+
+vi /etc/passwd
+
+/bin/bash
+
+www:x:1001:1001::/home/www:/sbin/nologin
+
+chown -R root /www
+
+
+ps -ef | grep tomcat
+
+kill -9 00000
+
+
+java -jar pro-0.0.2.jar
+
+nohup java -jar pro-0.0.2.jar &
+
+
+links www.baidu.com
+
+
+ps -ef | grep mysql
+
+ps -ef | grep java
+
+
+chown -R mysql:mysql /www/server/data/
+
+
+tail -f catalina.out
+
+
+
+
+cd pro-rely/
+mvn clean
+mvn install
+cd ..
+cd tool/
+mvn clean
+mvn install
+cd ..
+cd test/
+mvn clean
+mvn install
+cd ..
+cd sign/
+mvn clean
+mvn install
+cd ..
+cd hair/
+mvn clean
+mvn install
+cd ..
+cd data-dict/
+mvn clean
+mvn install
+cd ..
+cd code-plugin/
+mvn clean
+mvn install
+cd ..
+cd pro/
+mvn clean
+mvn install
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

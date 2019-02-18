@@ -1,0 +1,24 @@
+启动 nginx
+
+sudo nginx
+
+重启 nginx
+
+sudo nginx -s reload
+
+
+mac 配置文件路径
+
+/usr/local/etc/nginx
+
+mac 静态资源存放路径
+
+/usr/local/Cellar/nginx/1.15.3
+
+contos 配置文件路径
+
+/etc/nginx
+
+contos 静态资源存放路径
+
+/usr/share/nginx

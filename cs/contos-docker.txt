@@ -1,0 +1,79 @@
+contos docker
+
+ssh root@39.105.30.134 -p 22
+
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+
+sudo docker version
+
+sudo systemctl start docker
+
+sudo docker run hello-world
+
+
+docker search oracle
+
+docker search alexeiled/docker-oracle-xe-11g
+
+docker search centos
+
+docker pull alexeiled/docker-oracle-xe-11g
+
+docker ps -a
+
+docker run --privileged=true -h "oracle" --name "oracle" -d -p 49160:22 -p 1521:1521 -p 49162:8080 alexeiled/docker-oracle-xe-11g
+
+
+system
+
+oracle
+
+
+docker login -u moonnow -p moonnow
+
+
+docker save > oracle.tar alexeiled/docker-oracle-xe-11g:latest
+
+docker load < oracle.tar
+
+
+scp -P 22 /Users/moonnow/wode/file/docker/oracle11g/oracle.tar root@39.105.30.134:/root/tool/oracle11g
+
+
+docker pull centos
+
+docker run --privileged=true -d centos
+
+7784e7717dac
+
+docker exec -it 91618a1a334f /bin/bash
+
+
+docker run -it centos /bin/bash
+
+docker run -it 91618a1a334f /bin/bash
+
+docker start -it 91618a1a334f /bin/bash
+
+docker rm 91618a1a334f
+
+docker rm 9c77034ebee0
+docker rm cbe85e1ef8e2
+docker rm 7784e7717dac
+
+
+docker run --privileged=true --name "centos" -d -i -t centos /bin/bash
+
+docker exec -i -t centos /bin/bash
+
+docker stop centos
+
+
+
+

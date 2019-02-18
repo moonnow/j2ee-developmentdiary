@@ -1,0 +1,58 @@
+mac 安装 redis
+
+brew install redis
+
+启动 redis
+
+redis-server /usr/local/etc/redis.conf
+
+查看 redis 状态
+
+显示 PONG 运行正常
+
+redis-cli ping
+
+停止 redis
+
+redis-cli shutdown
+
+
+启动 redis 后台服务
+
+brew services start redis
+
+重启 redis 后台服务
+
+brew services restart redis
+
+停止 redis 后台服务
+
+brew services stop redis
+
+
+使用控制台连接 redis
+
+redis-cli
+
+redis-cli -h 127.0.0.1 -p 6379
+
+
+contos yum 安装 redis
+
+yum install -y redis
+
+启动 redis 后台服务
+
+service redis start
+
+停止 redis 后台服务
+
+service redis stop
+
+重启 redis 后台服务
+
+service redis restart
+
+开机自启
+
+chkconfig redis on

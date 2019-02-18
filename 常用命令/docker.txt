@@ -1,0 +1,45 @@
+列出所有的镜像
+
+docker image ls
+
+查看运行中容器
+
+docker ps
+
+查看所有容器
+
+docker ps -a
+
+运行oracle数据库容器
+
+docker start 64ef35685dc0
+
+docker start oracle
+
+终止oracle数据库容器
+
+docker stop 64ef35685dc0
+
+docker stop oracle
+
+删除容器
+
+docker rm 64ef35685dc0
+
+docker rm oracle
+
+进入容器
+
+docker exec -i -t centos /bin/bash
+
+复制文件到容器
+
+sudo docker cp /Users/apple/wode/wodepro/oraclecs/QHZW.sql 64ef35685dc0:/dbfile
+
+从容器复制文件
+
+sudo docker cp 64ef35685dc0:/dbfile/QHZW.sql /Users/apple/wode/wodepro/oraclecs/1
+
+登录 docker
+
+docker login -u moonnow -p moonnow

@@ -1,0 +1,35 @@
+拉代码
+
+git checkout master
+git pull
+git checkout develop
+git rebase master
+
+
+git rebase --continue
+
+
+拉项目建分支
+
+git branch develop remotes/origin/master
+git checkout develop
+git branch
+
+
+新建版本库
+
+git init
+在当前文件夹中放入git配置文件以及项目文件
+git status
+
+git add .
+git commit -m "first commit"
+
+git remote add origin ssh://moonnow.cn:9400/init.git  要上传到的git库
+
+git push -u origin master
+
+
+git branch develop master
+git checkout develop
+git branch

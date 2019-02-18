@@ -10,6 +10,10 @@ docker run --privileged=true -h "oracle" --name "oracle" -d -p 49160:22 -p 49161
 
 docker image ls
 
+查看运行中容器
+
+docker ps
+
 查看所有容器
 
 docker ps -a

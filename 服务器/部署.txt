@@ -1,0 +1,35 @@
+jar或war部署
+
+先修改pom文件以及配置文件
+
+
+打包命令 package.sh
+
+
+服务器地址
+
+ssh root@39.105.30.134 -p 22
+
+
+数据库地址
+
+39.105.30.134
+
+Moonnow166!
+
+3306
+
+
+scp -P 22 /path/pro-0.0.2.jar root@39.105.30.134:/root/jar
+
+tar -cxvf dist
+
+scp -P 22 /path/dist.tar.gz root@39.105.30.134:/usr/share/nginx
+
+
+ps -ef | grep java
+
+kill -9 00000
+
+
+nohup java -jar pro-0.0.2.jar &

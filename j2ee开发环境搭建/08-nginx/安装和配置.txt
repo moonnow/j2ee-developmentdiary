@@ -42,3 +42,65 @@ ps -ef | grep nginx
 静态资源存放路径
 
 /usr/local/Cellar/nginx/1.15.3
+
+
+启动 nginx
+
+sudo nginx
+
+测试配置文件
+
+sudo nginx -t
+
+停止 nginx
+
+sudo nginx -s stop
+
+重启 nginx
+
+sudo nginx -s reload
+
+查看 nginx 进程
+
+ps -ef | grep nginx
+
+mac 配置文件路径
+
+/usr/local/etc/nginx
+
+mac 静态资源存放路径
+
+/usr/local/Cellar/nginx/1.15.3
+
+contos 配置文件路径
+
+/etc/nginx
+
+contos 静态资源存放路径
+
+/usr/share/nginx
+
+
+nginx
+
+scp -P 22 /Users/moonnow/Downloads/nginx-release-centos-7-0.el7.ngx.noarch.rpm root@39.105.30.134:/root/tool/nginx
+
+nginx-release-centos-7-0.el7.ngx.noarch.rpm 文件目录下
+
+sudo yum localinstall -y nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+安装 nginx
+
+sudo yum install -y nginx
+
+显示 nginx 资源路径
+
+whereis nginx
+
+配置文件路径
+
+/etc/nginx
+
+静态资源存放路径
+
+/usr/share/nginx

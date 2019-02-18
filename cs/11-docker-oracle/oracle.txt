@@ -1,0 +1,132 @@
+CREATE TABLESPACE coding_data DATAFILE '/tablespacefile/coding_data.dbf' size 256M autoextend on next 32m maxsize 1024m;
+
+create user wodecoding identified by wodecoding default tablespace coding_data;
+
+grant connect,resource to wodecoding;
+grant create any sequence to wodecoding;
+grant create any table to wodecoding;
+grant delete any table to wodecoding;
+grant insert any table to wodecoding;
+grant select any table to wodecoding;
+grant unlimited tablespace to wodecoding;
+grant execute any procedure to wodecoding;
+grant update any table to wodecoding;
+grant create any view to wodecoding;
+grant dba to wodecoding;
+grant select on v_$sesstat to wodecoding;
+grant select on v_$statname to wodecoding;
+grant select on v_$session to wodecoding;
+grant select on v_$sql_plan to wodecoding;
+grant select on v_$sql_plan_statistics_all to wodecoding;
+grant select on v_$sql to wodecoding;
+
+
+
+
+CREATE USER "QHZW" IDENTIFIED BY "qhzw"
+
+grant connect,resource to QHZW;
+grant create any sequence to QHZW;
+grant create any table to QHZW;
+grant delete any table to QHZW;
+grant insert any table to QHZW;
+grant select any table to QHZW;
+grant unlimited tablespace to QHZW;
+grant execute any procedure to QHZW;
+grant update any table to QHZW;
+grant create any view to QHZW;
+grant dba to QHZW;
+
+CREATE USER "QHZW" IDENTIFIED BY "qhzw"
+
+grant connect,resource to QHZW;
+grant create any sequence to QHZW;
+grant create any table to QHZW;
+grant delete any table to QHZW;
+grant insert any table to QHZW;
+grant select any table to QHZW;
+grant unlimited tablespace to QHZW;
+grant execute any procedure to QHZW;
+grant update any table to QHZW;
+grant create any view to QHZW;
+grant dba to QHZW;
+
+
+
+
+
+/u01/app/oracle/oradata/XE/
+
+
+
+CREATE TABLESPACE "YOURTABLESPACENAME" DATAFILE '/u01/app/oracle/oradata/XE/YOURTABLESPACENAME.DBF' SIZE 128M AUTOEXTEND ON NEXT 32M MAXSIZE UNLIMITED;
+
+CREATE TABLESPACE coding_data DATAFILE '/tablespacefile/coding_data.dbf' size 256M autoextend on next 32m maxsize 1024m;
+
+
+
+
+CREATE USER "YOURUSERNAME" IDENTIFIED BY "yourpassword" DEFAULT TABLESPACE "YOURTABLESPACENAME" TEMPORARY TABLESPACE "TEMP";
+
+mvn install:install-file -Dfile=/Users/moonnow/wode/file/ojdbc/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.2.0 -Dpackaging=jar
+
+
+
+
+1  10
+
+3  10
+
+
+
+s
+
+e
+
+
+
+mvn install:install-file -Dfile=/Users/moonnow/wode/tool/eclipseworkspace/huaxinqhzw2/qhzw-ht/src/main/resource/lib/base-1.1.jar -DgroupId=com.dhc.traffic -DartifactId=base -Dversion=1.1 -Dpackaging=jar
+
+
+
+
+mvn install:install-file -Dfile=/Users/moonnow/wode/tool/eclipseworkspace/huaxinqhzw2/qhzw-ht/src/main/resource/lib/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=1.0 -Dpackaging=jar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

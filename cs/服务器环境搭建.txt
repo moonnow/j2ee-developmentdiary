@@ -1,0 +1,87 @@
+服务器环境搭建
+
+ssh root@39.105.30.134 -p 22
+
+1   mysql
+
+mysql 官网下载 yum 安装源文件
+
+上传到服务器
+
+scp -P 22 /Users/moonnow/Downloads/mysql80-community-release-el7-2.noarch.rpm root@39.105.30.134:/root/tool/mysql8
+
+下载 mysql 发行包 安装选项[y/d/N] 选 y
+
+sudo yum localinstall mysql80-community-release-el7-2.noarch.rpm
+
+安装 mysql
+
+sudo yum install -y mysql-community-server
+
+启动 mysql
+
+sudo service mysqld start
+
+查看 mysql 状态
+
+sudo service mysqld status
+
+查看 mysql 密码
+
+sudo grep 'temporary password' /var/log/mysqld.log
+
+登录 mysql 如果没有密码 直接回车 可能用到刷新权限 flush privileges
+
+mysql -uroot -p
+
+FhosNP06iq!.
+
+修改 root 密码
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourpassword';
+
+开启允许远程连接
+
+use mysql;
+
+SELECT USER, HOST FROM user;
+
+UPDATE user SET HOST = '%' WHERE USER = 'root';
+
+
+2   jdk 8
+
+scp -P 22 /Users/moonnow/Downloads/jdk-8u191-linux-x64.tar.gz root@39.105.30.134:/root/tool/jdk8
+
+修改环境变量 用户目录下
+
+vi .bash_profile
+
+export JAVA_HOME=/root/tool/jdk8/jdk1.8.0_191
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
+
+
+3   nginx
+
+scp -P 22 /Users/moonnow/Downloads/nginx-release-centos-7-0.el7.ngx.noarch.rpm root@39.105.30.134:/root/tool/nginx
+
+sudo yum localinstall nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+sudo yum install -y nginx
+
+whereis nginx
+
+配置文件路径
+
+/etc/nginx
+
+静态资源存放路径
+
+/usr/share/nginx
+
+
+
+
